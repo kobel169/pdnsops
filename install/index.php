@@ -4,6 +4,7 @@
 </head>
 <body>
 <?php
+$host = $_SERVER['HTTP_HOST'];
 
 function createConnectionString($driver, $host, $port, $database)
 {
@@ -59,7 +60,7 @@ if (isset($_POST['install']))
 								 $config);
 		
 		$path = dirname($_SERVER['SCRIPT_FILENAME']) . '/../protected/config';
-		$realpath = realpath($path) . '/main.php'; 
+		$realpath = realpath($path) . '/'.$host.'.php'; 
 
 		$res = file_put_contents($realpath, $newconfig);
 		if ($res === false)
@@ -104,12 +105,12 @@ else
 $prereqs['PDO'] = $status;
 
 // Yii framework
-$path = dirname($_SERVER['SCRIPT_FILENAME']) . '/../../yii/';
+$path = dirname($_SERVER['SCRIPT_FILENAME']) . '/../yii/';
 $realpath = realpath($path);
 if (is_dir($realpath) === true ||
    (is_link($realpath) === true && is_dir(readlink($realpath)) === true))
 {	
-	$status = 'OK - Please check that you meet the <a href="../../yii/requirements/" target="_blank">requirements of the yii framework</a>.';
+	$status = 'OK - Please check that you meet the <a href="../yii/requirements/" target="_blank">requirements of the yii framework</a>.';
 }
 else 
 {
@@ -125,14 +126,15 @@ $configReal = realpath($configPath);
 $protectedPath = dirname($_SERVER['SCRIPT_FILENAME']) . '/../protected/config/';
 $protectedReal = realpath($protectedPath); 
 
+
 if (is_writeable($configReal) === false)
 {
 	$status = "Error: Cannot write to '$configReal'. Please make sure that the directory '$protectedReal' and its contents are writeable.";
 	$errorCount++;
 }
-else if (is_file($configReal . '/main.php'))
+else if (is_file($configReal . '/'.$host.'.php'))
 {
-	$status = "Error: Configuration '$configReal/main.php' already exists.";
+	$status = "Error: Configuration '$configReal/'.$host.'.php' already exists.";
 	$errorCount++;
 }
 else

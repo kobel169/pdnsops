@@ -1,8 +1,9 @@
 <?php
+$host = $_SERVER['HTTP_HOST'];
 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/../yii/framework/yii.php';
-$config=dirname(__FILE__).'/protected/config/main.php';
+$yii=dirname(__FILE__).'/yii/framework/yii.php';
+$config=dirname(__FILE__).'/protected/config/'.$host.'.php';
 
 if (is_file($config))
 {
@@ -18,5 +19,6 @@ else
 {
 ?>
 <p>Looks like you this is the first time you are running PDNSOps. Please run the <a href="./install/">installer</a> first.</p>
-<?
+<php?
 }
+?>
