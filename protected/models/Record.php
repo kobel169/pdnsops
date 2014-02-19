@@ -20,9 +20,15 @@ class Record extends CActiveRecord
 	const TYPE_MX = 'MX';
 	
 	const TYPE_A = 'A';
+
+	const TYPE_AAAA = 'AAAA';
 	
 	const TYPE_NS = 'NS';
-	
+
+	const TYPE_PTR = 'PTR';
+
+	const TYPE_TXT = 'TXT';
+
 	const TYPE_CNAME = 'CNAME';
 		
 	const PRIORITY_DEFAULT = 0;
@@ -140,6 +146,9 @@ class Record extends CActiveRecord
 		return array(Record::TYPE_SOA => Record::TYPE_SOA, 
 					 Record::TYPE_MX => Record::TYPE_MX, 
 					 Record::TYPE_A => Record::TYPE_A, 
+					 Record::TYPE_AAAA => Record::TYPE_AAAA, 
+					 Record::TYPE_PTR => Record::TYPE_PTR, 
+					 Record::TYPE_TXT => Record::TYPE_TXT, 
 					 Record::TYPE_NS => Record::TYPE_NS, 
 					 Record::TYPE_CNAME => Record::TYPE_CNAME);
 	}
