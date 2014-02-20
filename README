@@ -23,10 +23,10 @@ PowerDNS: http://wiki.powerdns.com/trac
 == Install ==
 * Get the latest PDNSOps2 code from 
 ** https://github.com/pdnsops2/pdnsops/zipball/master
-* Get Yii 1.0 from
-** http://yii.googlecode.com/files/yii-1.1.10.r3566.tar.gz
-* Unzip both PDNSOps and Yii to the same folder (e.g. /var/www )
-* Rename 'yii-1.1.10.r3566' folder to 'yii'
+* Get Latest Yii 1.0 from http://yiiframework.com/
+* Unzip PDNSOps to the same folder (e.g. /var/www )
+* Untar Yii to folder with PDNSOps (e.g. /var/www/pdnsops)
+* Rename 'yii-1.version' folder to 'yii'
 * Create a database and user for PDNSOps
 * Visit http://yourURLhere/pdnsops/install/
 * Follow the installer's instructions
