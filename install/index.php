@@ -129,12 +129,12 @@ $protectedReal = realpath($protectedPath);
 
 if (is_writeable($configReal) === false)
 {
-	$status = "Error: Cannot write to '$configReal'. Please make sure that the directory '$protectedReal' and its contents are writeable.";
+	$status = "Error: Cannot write to $configReal. Please make sure that the directory '$protectedReal' and its contents are writeable.";
 	$errorCount++;
 }
 else if (is_file($configReal . '/'.$host.'.php'))
 {
-	$status = "Error: Configuration '$configReal/'.$host.'.php' already exists.";
+	$status = "Error: Configuration '$configReal/$host.php' already exists.";
 	$errorCount++;
 }
 else
