@@ -3,3 +3,4 @@ assets/*
 .DS_Store
 #protected/config/main.php
 protected/runtime/*
+yii/*

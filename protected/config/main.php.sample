@@ -9,7 +9,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'PDNSOps',
 	'language'=>'en',
-	'theme'=>'pdnsops',
+	'theme'=>'classic',
 
 	// preloading 'log' component
 	'preload'=>array('log'),

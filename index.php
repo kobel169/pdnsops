@@ -19,6 +19,6 @@ else
 {
 ?>
 <p>Looks like you this is the first time you are running PDNSOps. Please run the <a href="./install/">installer</a> first.</p>
-<php?
+<?php
 }
 ?>
