@@ -21,7 +21,11 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'record-grid',
-	'dataProvider'=>new CArrayDataProvider($model->records, array()),
+	'dataProvider'=>new CArrayDataProvider($model->records, array(
+            
+                'pagination'=>array(
+                'pageSize'=>Yii::app()->settings->recordsPerPage,),
+        )),
 	'columns'=>array(
 		array(
 			'name'=>'name',

@@ -49,7 +49,10 @@ $this->menu=array(
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'domain-grid',
-	'dataProvider'=>new CArrayDataProvider($model->domains, array()),
+	'dataProvider'=>new CArrayDataProvider($model->domains, array(
+                'pagination'=>array(
+                'pageSize'=>Yii::app()->settings->recordsPerPage,),
+        )),
 	'columns'=>array(
 		array(
 			'name'=>'name',

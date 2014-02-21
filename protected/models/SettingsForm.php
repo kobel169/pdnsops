@@ -8,6 +8,8 @@
 class SettingsForm extends CFormModel
 {
 	public $domainMasterIP;
+
+	public $recordsPerPage;
 	
 	public $defaultTTL;
 	
@@ -42,7 +44,7 @@ class SettingsForm extends CFormModel
 	{
 		return array(
 			array('defaultTTL,soaRetry,soaRefresh,soaExpire,theme', 'required'),
-			array('defaultTTL,soaRetry,soaRefresh,soaExpire', 'numerical', 'integerOnly'=>true),
+			array('defaultTTL,soaRetry,soaRefresh,soaExpire,recordsPerPage', 'numerical', 'integerOnly'=>true),
 			array('domainMasterIP,ns1,ns2,ns3,ns4,ns5,ns6,ns7,ns8', 'length', 'max'=>15),
 			array('domainMasterIP,ns1,ns2,ns3,ns4,ns5,ns6,ns7,ns8', 'ext.validators.FIpValidator', 'version'=>'ipv4'),
 		);
@@ -57,6 +59,7 @@ class SettingsForm extends CFormModel
 	{
 		return array(
 			'domainMasterIP'=>Yii::t('app','setting.domainMasterIP'),
+			'recordsPerPage'=>Yii::t('app','setting.recordsPerPage'),
 			'defaultTTL'=>Yii::t('app','setting.defaultTTL'),
 			'soaRetry'=>Yii::t('app','setting.soaRetry'),
 			'soaRefresh'=>Yii::t('app','setting.soaRefresh'),

@@ -42,7 +42,10 @@ $('.search-form form').submit(function(){
 	}
 	else
 	{
-		$dataProvider = new CArrayDataProvider($user->domains, array());
+            $dataProvider = new CArrayDataProvider($user->domains, array(
+                'pagination'=>array(
+                'pageSize'=>Yii::app()->settings->recordsPerPage,),
+         ));
 	}
 
 	  $this->widget('zii.widgets.grid.CGridView', array(

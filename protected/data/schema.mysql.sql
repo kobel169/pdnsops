@@ -68,6 +68,7 @@ INSERT INTO user (username, password, email, admin) VALUES ('demo', '89e495e7941
 
 INSERT INTO setting (`key`, `value`) VALUES
 	('domainMasterIP', ''),
+	('recordsPerPage', '5'),
 	('defaultTTL', '7200'),
 	('soaRetry', '3600'),
 	('soaRefresh', '10800'),
