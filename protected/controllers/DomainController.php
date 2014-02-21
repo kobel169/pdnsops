@@ -52,7 +52,7 @@ class DomainController extends Controller
 	private function createSOA($model)
 	{
 		$settings = Yii::app()->settings;
-		return $this->createRecord($model->name, Record::TYPE_SOA, $settings->ns1 . ' ' . 'ADMIN_INCOMING' . ' ' . date('Ymd00') . ' ' . 
+		return $this->createRecord($model->name, Record::TYPE_SOA, $settings->ns1 . ' ' . 'ADMIN_INCOMING' . ' 0 ' . 
 					$settings->soaRefresh . ' ' . $settings->soaRetry . ' ' . $settings->soaExpire . ' ' . $settings->defaultTTL);
 	}
 
