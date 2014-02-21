@@ -77,7 +77,7 @@ class Record extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('domain_id, ttl, prio', 'numerical', 'integerOnly'=>true),
-			array('name,ttl,prio', 'required'),
+			array('name,ttl,prio,change_date', 'required'),
 			array('name', 'length', 'max'=>255),
 			array('type', 'length', 'max'=>10),
 			array('content', 'length', 'max'=>4096),

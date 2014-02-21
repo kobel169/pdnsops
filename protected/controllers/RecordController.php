@@ -50,6 +50,7 @@ class RecordController extends Controller
 
 		if(isset($_POST['Record']))
 		{
+                        $_POST['Record']['change_date'] = time();
 			$model->attributes=$_POST['Record'];
 			$model->name = $model->name . '.'.$model->domain->name; # ivaano
 			if($model->save())
@@ -82,7 +83,9 @@ class RecordController extends Controller
 
 		if(isset($_POST['Record']))
 		{
+                        $_POST['Record']['change_date'] = time();
 			$model->attributes=$_POST['Record'];
+
 			if($model->save())
 			{
 				Yii::app()->audit->log('Updated record: ' . $model->id);
