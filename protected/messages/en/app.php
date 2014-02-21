@@ -66,6 +66,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	// Settings
 	'setting.change'=>'Change global system settings.',
 	'setting.domainMasterIP'=>'Domain Master IP',
+	'setting.recordsPerPage'=>'Records Per Page',
 	'setting.defaultTTL'=>'Default TTL',
 	'setting.soaRetry'=>'SOA Retry',
 	'setting.soaRefresh'=>'SOA Refresh',

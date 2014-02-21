@@ -66,7 +66,7 @@ return array(
 	// Settings
 	'setting.change'=>'Изменить глобальные настройки системы.',
 	'setting.domainMasterIP'=>'IP Мастер сервера',
-	'setting.recordsPerPage'=>'IP Мастер сервера',
+	'setting.recordsPerPage'=>'Записей на страницу',
 	'setting.defaultTTL'=>'TTL по умолчанию',
 	'setting.soaRetry'=>'SOA Retry',
 	'setting.soaRefresh'=>'SOA Refresh',
