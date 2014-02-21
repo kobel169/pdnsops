@@ -32,6 +32,13 @@ PowerDNS: http://wiki.powerdns.com/trac
 * Follow the installer's instructions
 * Done!
 
+== Multidomain ==
+You may setup many virtualhosts to dir with installed pdnsops
+On any new virtualhost required new setup from step of creating database.
+Configuration files has names HOSTNAME.php 
+
+
+
 == License ==
 This software is released under the GNU General Public License (GPL) v2. For the
 terms of the license, see the file LICENSE included in this
