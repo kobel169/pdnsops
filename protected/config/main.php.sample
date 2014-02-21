@@ -1,13 +1,13 @@
 <?php
+$host =	$_SERVER['HTTP_HOST'];
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
-
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'PDNSOps',
+	'name'=>strtoupper($host),
 	'language'=>'en',
 	'theme'=>'classic',
 
