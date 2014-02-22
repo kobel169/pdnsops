@@ -1,4 +1,4 @@
-== About ==
+== About == 
 PDNSOps2 is a Web-based application which aids in administration of domains and 
 records for PowerDNS running the MySQL and PostgreSQL backend. PDNSOps2 is 
 targeted mainly toward individual domain owners and small businesses, but 
