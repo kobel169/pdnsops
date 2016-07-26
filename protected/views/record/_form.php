@@ -8,7 +8,7 @@
 	<p class="note"><?php echo Yii::t('app','page.requiredFields'); ?></p>
 
 	<?php echo $form->errorSummary($model); ?>
-	
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'domain_id'); ?>
 		<?php echo $model->domain->name; echo $form->hiddenField($model,'domain_id');?>
@@ -17,7 +17,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); echo '.' .$model->domain->name; #ivaano ?>
+		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>255)); echo '.' .$model->domain->name; ?>
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 

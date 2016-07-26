@@ -48,7 +48,7 @@ $('.search-form form').submit(function(){
          ));
 	}
 
-	  $this->widget('zii.widgets.grid.CGridView', array(
+	$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'domain-grid',
 	'dataProvider'=>$dataProvider,
 	'filter'=>$model,

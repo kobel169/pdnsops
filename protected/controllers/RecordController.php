@@ -52,7 +52,7 @@ class RecordController extends Controller
 		{
                         $_POST['Record']['change_date'] = time();
 			$model->attributes=$_POST['Record'];
-			$model->name = $model->name . '.'.$model->domain->name; # ivaano
+			$model->name = $model->name . '.'.$model->domain->name;
 			if($model->save())
 			{
 				Yii::app()->audit->log('Created record: ' . $model->id);
@@ -62,7 +62,7 @@ class RecordController extends Controller
 
 		$userId = Yii::app()->user->getId();
 		$user=User::model()->findByPK($userId);
-		
+
 		$this->render('create',array(
 			'model'=>$model,
 			'user'=>$user,
@@ -111,7 +111,7 @@ class RecordController extends Controller
 			$this->loadModel($id)->delete();
 
 			Yii::app()->audit->log('Deleted record: ' . $id);
-			
+
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			if(!isset($_GET['ajax']))
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
